@@ -1,0 +1,23 @@
+<button type="button" class="btn btn-outline-success" (click)="add(0)" style="
+    font-style: italic;
+    width: 100%;
+    border: #fff;
+    border-radius: 0px;
+    "> Agregar Nueva Empresa </button>
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Empresa</th>
+                <th scope="col">Ver página</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let e of empresas">
+                <td>{{e.denominacion}}</td>
+                <td><a routerLink="/home/{{e.id}}">Ir a la página</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,16 @@
+<input class="form-control" type="text" placeholder="Buscar planeta..." style="width: 255px;"
+name="filterPost" [(ngModel)]="filterPost">
+
+<div class="d-flex flex-wrap">
+    <div style="margin:10px" *ngFor="let item of datosArray | filter:filterPost">
+        <div class="card" style="width: 300px;">
+            <img class="card-img-top" style="width: 100px; height: 100px; margin: 10px;" [src]="item.foto">            
+            <div class="card-body">
+                <h5 class="card-title"> {{ item.articulo }} </h5>
+                <div> Código: {{ item.codigo }} </div>                
+                <hr/>
+                <a class="btn btn-dark" (click)="detalle(item.codigo)"> Detalle </a>
+            </div>
+          </div>
+    </div>
+</div>

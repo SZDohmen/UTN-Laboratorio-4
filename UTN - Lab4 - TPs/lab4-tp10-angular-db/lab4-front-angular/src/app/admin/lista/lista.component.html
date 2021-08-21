@@ -1,0 +1,35 @@
+<button class="btn btn-success m-3" (click)="detail(0)"> Nuevo Instrumento </button>
+<br>
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Nombre</th>
+                <th>Marca</th>
+                <th>Descripcion</th>
+                <th>Imagen Link</th>
+                <th>Precio</th>
+                <th>Costo del envio</th>
+                <th>Cantidad vendida</th>
+                <th>Acciones</th>
+            </tr>    
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of instrumento">
+                <td>{{i.id}}</td>
+                <td>{{i.nombre}}</td>
+                <td>{{i.marca}}</td>
+                <td>{{i.descripcion}}</td>
+                <td>{{i.imagen}}</td>
+                <td>{{i.precio}}</td>
+                <td>{{i.costoEnvio}}</td>
+                <td>{{i.cantVendida}}</td>
+                <td>
+                    <button class="btn btn-primary m-l" (click)="detail(i.id)"> Ver detalles </button>
+                    <button class="btn btn-danger m-2" (click)="delete(i.id)"> Borrar </button>
+                </td>
+            </tr>    
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,28 @@
+.titulo {
+    text-align: center;
+
+}
+
+.row {
+    display: 'flex';
+    justify-content: 'center';
+}
+
+.contenedor {     
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10px;    
+}
+
+.card {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+    margin: 10px;
+    
+}
+
+.imagen {
+    width: 200px;
+    height: 200px;
+}

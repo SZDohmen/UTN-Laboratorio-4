@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src/ts",
+    "outDir": "./src/js",
+    "noImplicitAny": true,
+    "module": "ESNext",
+    "moduleResolution": "Node"
+  }
+}

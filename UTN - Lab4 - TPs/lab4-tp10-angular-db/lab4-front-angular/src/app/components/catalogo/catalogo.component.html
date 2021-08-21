@@ -1,0 +1,24 @@
+<div class="m-3">
+    <form class="form-group">
+        <input class="form-control margen-top-5" type="text" placeholder="Buscar instrumento..." style="width: 255px;"
+        name="filterPost" [(ngModel)]="filterPost">
+    </form>
+</div>
+
+<div class="m-3">
+    <div class="row">
+        <div class="col-xs-4" *ngFor="let i of instrumento | filter:filterPost">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h3 class="card-title"> {{i.nombre}} </h3>
+                    <h6 class="card-subtitle"> {{i.marca}} </h6>
+                    <img class="card-imagen" [src]="i.imagen">
+                    <p class="card-text">$ {{i.precio}} </p>
+                    <p class="card-text" *ngIf="i.costoEnvio != 'G' " style="color:orange"> Costo de Envio Interior de Argentina: ${{i.costoEnvio}} </p>
+                    <p class="card-text" *ngIf="i.costoEnvio == 'G' " style="color:green"> Envio gratis a todo el pais </p> 
+                    <button class="btn btn-primary m-l" (click)="detail(i.id)"> Ver detalles </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

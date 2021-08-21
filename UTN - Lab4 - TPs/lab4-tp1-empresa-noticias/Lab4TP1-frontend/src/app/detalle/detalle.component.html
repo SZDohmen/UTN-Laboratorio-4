@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+
+
+<div class="detalles">
+      <div id="imagenPrincipal" style="height: 400px; background-image: url({{this.noticia.imagen}}); background-repeat: no-repeat;background-size: contain;">
+          <div style="text-align:left; background-color: rgba(1,1,1,0.5);color: #ffffff;font-size: 23px;line-height: 40px;text-indent: 10px;">
+            {{this.noticia.titulo}}                        
+          </div>
+      </div>
+  <h2>
+    {{this.noticia.titulo}}
+  </h2>
+    {{this.noticia.fechaPublicacion | date:'dd-MMMM-yyyy'}}
+  <hr>
+<div class="row offs2">
+
+<div class="col-lg-12">
+  <dl class="terms-list">
+    <dt>
+        {{this.noticia.resumen}}
+    </dt>
+    <hr>
+    <dd>
+        {{this.noticia.contenidoHTML}}
+    </dd>
+  </dl>
+</div>

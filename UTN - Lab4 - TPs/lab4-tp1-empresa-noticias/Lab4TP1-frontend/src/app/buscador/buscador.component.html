@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+<div class="resultadosbusqueda">	
+    <h2>
+      {{this.terminoBusqueda}}
+    </h2>
+    <div class="tablaresultados" *ngFor="let noticiaAux of this.noticiaBusqueda | orderBy:'-fechaPublicacion' | slice:0:20">
+        <table width="80%" margin="0">
+            <tbody>
+                <tr>
+                    <td>
+                        <a href="/detalle/{{noticiaAux.id}}"> 
+                            <img width="350px" class="imgNoticia" src= "{{noticiaAux.imagen}}" alt="">
+                        </a>
+                    </td>
+                    <td width=""></td>
+                    <td style="text-align:start;" valign="top">
+                        <a style="text-align:start; font-size:20px" href="/detalle/{{noticiaAux.id}}" class="banner">
+                            {{noticiaAux.titulo}}</a>
+                        <div class="verOcultar">
+                            {{noticiaAux.resumen}}<a href="/detalle/{{noticiaAux.id}}" style="color:blue"> Leer Mas - {{noticiaAux.fechaPublicacion | date:'dd-MMMM-yyyy'}}</a>											
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

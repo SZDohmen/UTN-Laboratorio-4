@@ -1,0 +1,20 @@
+<div style="margin:10px">
+    <div class="card" style="width: 600px;">
+        <div class="card-body">
+            <img class="card-img-top" style="width: 150px; height: 150px; margin:10px;" [src]="jsonData.foto"
+                alt="jsonData.foto">
+            <h5 class="card-title"> {{jsonData.articulo}} </h5>
+            <div> Código: {{ jsonData.codigo }} </div>
+            <div *ngIf="jsonData.esPromocion===true"> PROMO! </div>
+            <div *ngIf="jsonData.esPromocion===false"> Sin promoción </div>
+            <div> Fecha de Vencimiento: {{ jsonData.fechaVencimiento }} </div>
+            Precios Relevados:
+            <div *ngFor="let precio of jsonData.preciosRelevados">
+                <div style="margin-left: 10px;"> > ${{ precio }} </div>
+            </div>
+            <div> Promedio de precios: $ {{ promedio(jsonData.preciosRelevados) }} </div>
+            <hr />
+            <a class="btn btn-dark" href="/">Volver</a>
+        </div>
+    </div>
+</div>

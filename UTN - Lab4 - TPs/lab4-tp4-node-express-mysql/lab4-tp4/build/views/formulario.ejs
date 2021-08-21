@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>    
+    <h2 class="container"> <%= opcion %> </h2>
+    <div class="container d-flex">
+    <form method="POST" action="/empleado/<%= url %>">
+        <div>
+            <input class="form-control" name="Legajo" placeholder="Legajo" <% if(empleado){ %> value="<%= empleado.legajo %>" <% } %> >
+        </div>
+        <div>
+            <input class="form-control" name="Apellido" placeholder="Apellido" <% if(empleado){ %> value="<%= empleado.apellido %>"<% } %> >
+        </div>
+        <div>
+            <input class="form-control" name="Nombre" placeholder="Nombre" <% if(empleado){ %> value="<%= empleado.nombre %>"<% } %> >
+        </div>
+        <div>
+            <input class="form-control" name="Dni" placeholder="Dni" <% if(empleado){ %> value="<%=empleado.dni %>"<% } %> >
+        </div>
+        <div>
+            <input class="form-control" name="Sector" placeholder="Sector" <% if(empleado){ %> value="<%= empleado.sector %>"<% } %> >
+        </div>
+        <div>
+            <input class="form-control" name="Fecha" type="date" placeholder="Fecha" <% if(empleado){ %> value="<%= empleado.fecha_ingreso %>"<% } %> >
+        </div>
+        <div>
+            <input class="form-control" name="Activo" placeholder="Activo" <% if(empleado){ %> value="<%= empleado.activo %>"<% } %> >
+        </div>
+
+        <button class="btn btn-success"> <%= opcion %> </button>        
+    </form>
+    </div>
+</body>
+
+</html>

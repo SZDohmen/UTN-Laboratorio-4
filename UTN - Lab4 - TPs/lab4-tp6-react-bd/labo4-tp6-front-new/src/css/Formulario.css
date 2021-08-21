@@ -1,0 +1,33 @@
+.Formulario{
+    width: 100vw;
+}
+
+.Foto{
+    background-color: black;
+    border: none;
+    color:white;
+    text-transform: uppercase;
+    font-family: 'New Rocker', cursive;
+}
+
+button{
+    font-family: 'New Rocker', cursive;
+    border: none !important;
+    background-color: slategrey !important;
+}
+
+form > div {
+  position: relative;
+}
+form > div > label {
+  position: absolute;
+  transition: all 0.2s;
+}
+
+input:focus + label {
+  margin-top: -8.3vw;
+}
+
+textarea:focus + label{
+    margin-top: -21.5vw;
+}

@@ -1,0 +1,28 @@
+<div class="card">
+    <div class="card-body">
+
+        <p class="title">Nombre</p>
+        <input type="text" class="form-control" [(ngModel)]="instrumento.nombre">
+        
+        <p class="title">Marca</p>
+        <input type="text" class="form-control" [(ngModel)]="instrumento.marca">
+       
+        <p class="title">Link de la Imagen</p>
+        <input type="text" class="form-control" [(ngModel)]="instrumento.imagen">
+       
+        <p class="title">Precio</p>
+        <input type="text" class="form-control" [(ngModel)]="instrumento.precio">
+        
+        <p class="title">Costo del Envio (gratis = G)</p>
+        <input type="text" class="form-control" [(ngModel)]="instrumento.costoEnvio">
+
+        <p class="title">Cantidad vendida</p>
+        <input type="text" class="form-control" [(ngModel)]="instrumento.cantVendida">
+
+        <p class="title">Descripcion</p>
+        <textarea name="text" style="width:100%;" cols="2" rows="5" [(ngModel)]="instrumento.descripcion"></textarea>
+        
+        <button type="button" class="btn btn-success ml-2" (click)="detail()">Guardar</button>
+        <button type="button" class="btn btn-danger m-2" (click)="canelar()">Cancelar</button>
+    </div>    
+</div>

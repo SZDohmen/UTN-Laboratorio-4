@@ -1,0 +1,30 @@
+<h1>abm-noticia works!</h1>
+
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Título</span>
+    <input type="text" id="titulo" class="form-control" aria-label="titulo" aria-describedby="basic-addon1" [(ngModel)]="noticia.titulo">
+</div>
+
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Resumen</span>
+    <input type="text" id="resumen" class="form-control" aria-label="resumen" aria-describedby="basic-addon1" [(ngModel)]="noticia.resumen">
+</div>
+
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Url de la imagen</span>
+    <input type="text" id="imagen" class="form-control" aria-label="imagen" aria-describedby="basic-addon1" [(ngModel)]="noticia.imagen">
+</div>
+
+
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-small">Contenido de la Noticia</span>
+    <textarea id="editor" aria-label="contenidoHTML" aria-describedby="basic-addon1" [(ngModel)]="noticia.contenidoHTML"></textarea>
+</div>
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Empresa</span>
+    <input type="text" id="empresa" class="form-control" aria-label="empresa" aria-describedby="basic-addon1" [(ngModel)]="noticia.id" value="texto" readonly>
+</div>
+
+<button type="button" class="btn btn-success" (click)="save()">Guardar</button>
+<button type="button" class="btn btn-success ml-2" (click)="publish()">Publicar</button>
+<button type="button" class="btn btn-danger ml-2" (click)="cancel()">Cancelar</button>

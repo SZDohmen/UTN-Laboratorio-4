@@ -1,0 +1,28 @@
+.menu {
+    width: 100%;
+    border-bottom: 3px solid #bbb;
+    margin-top: 30px;
+}
+
+.buscador {
+    position:absolute;
+    top:8px;
+    right:15px;
+}
+
+.cuadroAzul {
+    position: relative;
+    color: #ffffff;
+    background: #44b9ec;
+    width: 300px;
+    height: 150px;
+    font-size: xx-large;
+    left: 75px;
+}
+
+.cuadroDerecho {
+    position: absolute;
+    top: 75px;
+    right: 75px;
+    text-align: right;    
+}

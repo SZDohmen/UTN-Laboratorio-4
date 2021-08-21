@@ -1,0 +1,49 @@
+<div class="m-5">
+    <div class="mb-4">
+        <h4>Datos de la empresa</h4>
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Denominación</span>
+        <input type="text" id="denominacion" class="form-control" aria-label="denominacion" aria-describedby="basic-addon1" [(ngModel)]="empresa.denominacion">
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Teléfono</span>
+        <input type="number" id="telefono" class="form-control" aria-label="telefono" aria-describedby="basic-addon1" [(ngModel)]="empresa.telefono">
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Horario de atención</span>
+        <input type="text" id="horarioAtencion" class="form-control" aria-label="horarioAtencion" aria-describedby="basic-addon1" [(ngModel)]="empresa.horarioAtencion">
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Quiénes somos</span>
+        <input type="text" id="quienesSomos" class="form-control" aria-label="quienesSomos" aria-describedby="basic-addon1" [(ngModel)]="empresa.quienesSomos">
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Latitud</span>
+        <input type="number" id="latitud" class="form-control" aria-label="latitud" aria-describedby="basic-addon1" [(ngModel)]="empresa.latitud">
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Longitud</span>
+        <input type="number" id="longitud" class="form-control" aria-label="longitud" aria-describedby="basic-addon1" [(ngModel)]="empresa.longitud">
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Domicilio</span>
+        <input type="text" id="domicilio" class="form-control" aria-label="domicilio" aria-describedby="basic-addon1" [(ngModel)]="empresa.domicilio">
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+        <input type="email" id="email" class="form-control" aria-label="email" aria-describedby="basic-addon1" [(ngModel)]="empresa.email">
+    </div>
+
+    <button type="button" class="btn btn-success" (click)="save()">Guardar</button>
+    <button type="button" class="btn btn-danger ml-2" (click)="cancel()">Cancelar</button>
+
+</div>

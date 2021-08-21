@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="card-body">
+        <h3 class="card-title"> {{i.nombre}} </h3>
+        <h6 class="card-subtitle"> {{i.marca}} </h6>
+        <img class="card-imagen" [src]="i.imagen">
+        <p class="card-text">$ {{i.precio}} </p>
+        <p class="card-text" *ngIf="i.costoEnvio != 'G' " style="color:orange"> Costo de Envio Interior de Argentina: ${{i.costoEnvio}} </p>
+        <p class="card-text" *ngIf="i.costoEnvio == 'G' " style="color:green"> Envio gratis a todo el pais </p> 
+        <p class="card-text"> Cantidad vendida: {{i.cantVendida}} </p>
+        <p class="card-text"> {{i.descripcion}} </p>
+
+        <button type="button" class="btn btn-primary m-2" (click)="volver()">Volver</button>
+    </div>    
+</div>

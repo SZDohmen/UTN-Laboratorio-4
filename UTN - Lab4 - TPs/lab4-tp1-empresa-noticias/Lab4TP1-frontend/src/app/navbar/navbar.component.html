@@ -1,0 +1,38 @@
+<div>
+    <div>
+        <!-- Cuadro Azul para el titulo de la empresa -->
+        <div class="cuadroAzul">
+            <br>
+            <p class="fs-1 ml-3"> DENOMINACIÓN EMPRESA </p>
+        </div>
+    
+        <!-- Seccion para el telefono y el horario de atencion -->
+        <div class="cuadroDerecho">
+            <h4 style="font-weight: bold;">TELÉFONO</h4>
+            <h1 style="color: #44b9ec; font-weight: bold;"> 0800-3254-4568 </h1>
+            <small>
+                <span style="font-weight: bold;">Horario de atención:</span>
+                Martes a Jueves - 09.00 a 14.00 hs
+            </small>
+        </div>    
+    </div>
+
+    <br>
+
+    <div class="menu">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button type="button" style="margin-left: 60px;" class="btn btn-dark mr-2" routerLink="/home/1">Inicio</button>
+            <button type="button" class="btn btn-outline-secondary" routerLink="/">Lista de Empresas</button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <div class="buscador">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Ingrese texto..."
+                            aria-label="busqueda" #buscarTexto aria-describedby="button-search">
+                        <button (click)="buscarNoticias(buscarTexto.value)" type="submit" style="margin-right: 60px;" class="btn btn-outline-secondary"
+                            id="button-search">Buscar</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>

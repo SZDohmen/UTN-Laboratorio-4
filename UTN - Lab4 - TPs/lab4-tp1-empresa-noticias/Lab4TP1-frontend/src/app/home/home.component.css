@@ -1,0 +1,124 @@
+.menu {
+    width: 100%;
+    border-bottom: 3px solid #bbb;
+    margin-top: 30px;
+}
+
+.buscador {
+    position:absolute;
+    top:8px;
+    right:15px;
+}
+
+
+.cuadroAzul {
+    position: relative;
+    color: #ffffff;
+    background: #44b9ec;
+    width: 300px;
+    height: 150px;
+    font-size: xx-large;
+    left: 75px;
+}
+
+.cuadroDerecho {
+    position: absolute;
+    top: 75px;
+    right: 75px;
+    text-align: right;    
+}
+
+.somos {
+    margin: 40px;
+}
+
+.estamos {
+    margin: 40px;
+}
+
+/*--------------------------------------------------*/
+
+.contenedorNoticias {
+    margin: 0;
+    padding: 0;
+    background: #34495e;
+    width: 100%;
+    height: 400px;
+}
+
+.carrusel {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /*para que las imagenes se superpongan*/
+    
+}
+
+.cajitaDiapositivas {
+    width: 500%;
+    height: 100%;
+    display: flex; /*  para que las imagenes se ajusten*/
+}
+
+.diapositiva {
+    width: 20%;
+    transition: 0.6s;
+}
+
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+
+/*bara de botones para la transicion de imagenes*/
+.navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 45.8%;
+}
+
+/*botones*/
+.boton {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #fff;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+    border-radius: 5px; 
+}
+  
+/*relleno del boton cuando el pasa por encima*/
+.boton:hover{
+    background: #fff ;
+}
+
+/*para que funcione la transicion de imagenes*/
+#r1:checked ~ .s1{
+    margin-left: 0;
+  }
+  #r2:checked ~ .s1{
+    margin-left: -20%;
+  }
+  #r3:checked ~ .s1{
+    margin-left: -40%;
+  }
+  #r4:checked ~ .s1{
+    margin-left: -60%;
+  }
+  #r5:checked ~ .s1{
+    margin-left: -80%;
+}
+
+/*--------------------------------------------------------------*/
+
+.infoNoticia {
+    /*position: absolute;*/
+    color: #ffffff;    
+    background:rgba(68, 185, 236, 0.753);
+    width: 500px;
+    height: 100px;
+    /*margin: -150px;*/
+    text-align: center;
+    padding: 10px;
+    margin-left: 22.5%;
+}
